@@ -6,22 +6,22 @@
 4,Banner Fort Collins Medical Center,Larimer,Fort Collins
 5,Boulder Community Health,Boulder,Boulder
 6,Castle Rock Adventist Hospital,Douglas,Castle Rock
-7,Cedar Springs Behavioral Hospital,El Paso,Colorado Springs
+7,Cedar Springs Hospital,El Paso,Colorado Springs
 8,Centennial Peaks Hospital,Boulder,Louisville
-9,Children's Hospital Colorado,Adams,Aurora
+9,Children’s Hospital Colorado,Adams,Aurora
 10,Children's Hospital Colorado North Campus,Boulder,Broomfield
 11,Children's Hospital Colorado South Campus,Douglas,Highlands Ranch
 12,Clear View Behavioral Health,Larimer,Johnstown
 13,Colorado Acute Long Term Hospital,Denver,Denver
 14,Colorado Canyons Hospital and Medical Center,Mesa,Fruita
-15,Colorado Mental Health Institute at Fort Logan,Denver,Denver
-16,Colorado Mental Health Institute at Pueblo,Pueblo,Pueblo
+15,Colorado Mental Health Institute Ft. Logan,Denver,Denver
+16,Colorado Mental Health Institute Pueblo,Pueblo,Pueblo
 17,Colorado Plains Medical Center,Morgan,Fort Morgan
 18,Community Hospital,Mesa,Grand Junction
-19,Conejos County Hospital,Conejos,La Jara
+19,San Luis Valley Health Conejos County Hospital,Conejos,La Jara
 20,Craig Hospital,Arapahoe,Englewood
 21,Delta County Memorial Hospital,Delta,Delta
-22,Denver Health Medical Center,Denver,Denver
+22,Denver Health,Denver,Denver
 23,Denver Springs,Douglas,Englewood
 24,East Morgan County Hospital,Morgan,Brush
 25,Eating Recovery Center a Behavioral Hospital,Denver,Denver
@@ -30,18 +30,18 @@
 28,Estes Park Medical Center,Larimer,Estes Park
 29,Evans Army Community Hospital,El Paso,Fort Carson
 30,Good Samaritan Medical Center,Boulder,Lafayette
-31,Grand River Medical Center,Garfield,Rifle
-32,Gunnison Valley Hospital,Gunnison,Gunnison
+31,Grand River Hospital District,Garfield,Rifle
+32,Gunnison Valley Health,Gunnison,Gunnison
 33,Haxtun Hospital District,Phillips,Haxtun
 34,HealthSouth Rehabilitation Hospital of Colorado Springs,El Paso,Colorado Springs
 35,HealthSouth Rehabilitation Hospital of Littleton,Arapahoe,Littleton
 36,Heart of the Rockies Regional Medical Center,Chaffee,Salida
 37,Highlands Behavioral Health System,Douglas,Highlands Ranch
-38,Keefe Memorial Hospital,Cheyenne,Cheyenne Wells
-39,Kindred Hospital - Denver,Denver,Denver
+38,Keefe Memorial Health Service District,Cheyenne,Cheyenne Wells
+39,Kindred Hospital – Denver,Denver,Denver
 40,Kindred Hospital - Denver South,Denver,Denver
-41,Kindred Hospital Aurora,Arapahoe,Aurora
-42,Kit Carson County Memorial Hospital,Kit Carson,Burlington
+41,Kindred Hospital – Aurora,Arapahoe,Aurora
+42,Kit Carson County Health Service District,Kit Carson,Burlington
 43,Lincoln Community Hospital,Lincoln,Hugo
 44,Littleton Adventist Hospital,Arapahoe,Littleton
 45,Longmont United Hospital,Boulder,Longmont
@@ -50,10 +50,10 @@
 48,McKee Medical Center,Larimer,Loveland
 49,Medical Center of the Rockies,Larimer,Loveland
 50,Melissa Memorial Hospital,Phillips,Holyoke
-51,Memorial Hospital Central,El Paso,Colorado Springs
+51,Memorial Hospital,El Paso,Colorado Springs
 52,Memorial Hospital North,El Paso,Colorado Springs
 53,Mercy Regional Medical Center,La Plata,Durango
-54,Middle Park Medical Center,Grand,Kremmling
+54,Middle Park Medical Center – Kremmling,Grand,Kremmling
 55,Middle Park Medical Center - Granby,Grand,Granby
 56,Montrose Memorial Hospital,Montrose,Montrose
 57,Mt. San Rafael Hospital,Las Animas,Trinidad
@@ -62,7 +62,7 @@
 60,North Suburban Medical Center,Adams,Thornton
 61,Northern Colorado Long Term Acute Hospital,Larimer,Johnstown
 62,Northern Colorado Rehabilitation Hospital,Larimer,Johnstown
-63,OrthoColorado Hospital at St. Anthony Medical Campus,Jefferson,Lakewood
+63,OrthoColorado Hospital,Jefferson,Lakewood
 64,Pagosa Springs Medical Center,Archuleta,Pagosa Springs
 65,Parker Adventist Hospital,Douglas,Parker
 66,Parkview Medical Center,Pueblo,Pueblo
@@ -73,19 +73,19 @@
 71,Platte Valley Medical Center,Adams,Brighton
 72,Porter Adventist Hospital,Denver,Denver
 73,Poudre Valley Hospital,Larimer,Fort Collins
-74,Presbyterian/St. Luke's Medical Center,Denver,Denver
+74,Presbyterian/St. Luke’s Medical Center,Denver,Denver
 75,Prowers Medical Center,Prowers,Lamar
 76,Rangely District Hospital,Rio Blanco,Rangely
 77,Rio Grande Hospital,Rio Grande,Del Norte
 78,Rose Medical Center,Denver,Denver
 79,Saint Joseph Hospital,Denver,Denver
-80,San Luis Valley Regional Medical Center,Alamosa,Alamosa
+80,San Luis Valley Health Regional Medical Center,Alamosa,Alamosa
 81,SCL Health Community Hospital - Northglenn,Adams,Northglenn
 82,SCL Health Community Hospital - Southwest,Jefferson,Littleton
 83,SCL Health Community Hospital - Westminster,Jefferson,Westminster
-84,Sedgwick County Memorial Hospital,Sedgwick,Julesburg
+84,Sedgwick County Health Center,Sedgwick,Julesburg
 85,Sky Ridge Medical Center,Douglas,Lone Tree
-86,Southeast Colorado Hospital,Baca,Springfield
+86,Southeast Colorado Hospital District,Baca,Springfield
 87,Southwest Memorial Hospital,Montezuma,Cortez
 88,Spalding Rehabilitation Hospital,Arapahoe,Aurora
 89,Spanish Peaks Regional Health Center,Huerfano,Walsenberg
@@ -93,7 +93,7 @@
 91,St. Anthony North Health Campus,Adams,Westminster
 92,St. Anthony Summit Medical Center,Summit,Frisco
 93,St. Francis Medical Center,El Paso,Colorado Springs
-94,St. Mary's Medical Center,Mesa,Grand Junction
+94,"St. Mary’s Hospital & Medical Center, Inc.",Mesa,Grand Junction
 95,St. Mary-Corwin Medical Center,Pueblo,Pueblo
 96,St. Thomas More Hospital,Fremont,Cañon City
 97,St. Vincent General Hospital District,Lake,Leadville
@@ -105,9 +105,9 @@
 103,UCHealth Broomfield Hospital,Broomfield,Broomfield
 104,UCHealth Grandview Hospital,El Paso,Colorado Springs
 105,University of Colorado Hospital,Adams,Aurora
-106,Vail Health Hospital,Eagle,Vail
+106,Vail Valley Medical Center,Eagle,Vail
 107,Valley View Hospital,Garfield,Glenwood Springs
-108,Vibra Long Term Acute Care Hospital,Adams,Thornton
+108,Vibra Hospital,Adams,Thornton
 109,Weisbrod Memorial County Hospital,Kiowa,Eads
 110,West Springs Hospital,Mesa,Grand Junction
 111,Wray Community District Hospital,Yuma,Wray
