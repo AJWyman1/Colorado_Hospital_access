@@ -45,7 +45,32 @@ def save_census_year_df(year, path):
     census_year_df = census_df[year_mask]
     census_year_df.to_csv(path)
 
+def get_percents(col):
+    lst = []
+    no_beds_col_tot = county_no_beds[col].sum()
+    has_beds_col_tot = county_has_beds[col].sum()
+    tot_pop = county_no_beds['TOT_POP'].sum() + county_has_beds['TOT_POP'].sum()
+    lst.append(county_no_beds[col].sum()/county_no_beds['TOT_POP'].sum())
+    lst.append((no_beds_col_tot + has_beds_col_tot)/tot_pop)
+    lst.append(county_has_beds[col].sum()/county_has_beds['TOT_POP'].sum())
+    return lst
 
+def bar_plot_and_save(label, x, y, color):
+    fig, ax = plt.subplots(1, 1)
+    ax.bar(x, y, color=color)
+    plt.xticks(fontsize=10)
+    plt.title(label=label, fontsize=20)
+    plt.show()
+
+'''
+Questions to be investigated:
+    What are some of the patterns of counties without hospitals? Counties with hospitals?
+    What are some of the characteristics of counties with high senior populations and no hospitals
+
+    IS there a correlation between life expectancy and hospital access?
+    What can we say about counties with greatest cases of covid and hospital access
+    What can we say about hospital access and demographics?
+'''
 if __name__ == '__main__':
     plt.style.use('ggplot')
     #save_census_year_df(2018, '../data/2018_census_est.csv')
@@ -94,10 +119,11 @@ if __name__ == '__main__':
     senior_citizen_county.sort_values(by=['TOT_POP'], inplace=True, ascending=False)
     senior_pop = senior_citizen_county[['CTYNAME', 'TOT_POP']]
     senior_pop['perc_senior'] = senior_pop['TOT_POP'] / senior_pop['TOT_POP'].sum()
-    print(senior_pop)
+    senior_pop.rename({"TOT_POP": "Senior"}, axis="columns", inplace=True)
+    # print(senior_pop)
 
     # beds_hospitals.sort_values(by=['Perc_Hispanic_Pop'], inplace=True, ascending=False)
-    # fig, ax = plt.subplots(1, 1)
+    fig, ax = plt.subplots(1, 1)
     # ax.set_title('Number of Hospitals and Percent Hispanic Population')
     # ax.bar(beds_hospitals['CTYNAME'], beds_hospitals['Perc_Hispanic_Pop'], color='blue')
     # ax.set_ylabel("Percent Hispanic Population", color='blue', fontsize=16)
@@ -117,16 +143,40 @@ if __name__ == '__main__':
     # print(senior_citizen_df.info())
 
 
-    hisp_pop_df = wealth_and_health_df[['CTYNAME', 'Perc_Hispanic_Pop','Hispanic']].copy()
-    hisp_pop_df.sort_values(by=['Hispanic'], inplace=True, ascending=False)
-    hisp_pop_df['perc_his_pop'] = hisp_pop_df['Hispanic'] / hisp_pop_df['Hispanic'].sum()
+    hisp_pop_df = wealth_and_health_df[['CTYNAME', 'TOT_POP','COVID Cases', 'GDP', 'Perc_Hispanic_Pop','Hispanic', 'White']].copy()
+    hisp_pop_df['Perc_White_Pop'] = hisp_pop_df['White'] / hisp_pop_df['TOT_POP']
+ 
+    hisp_pop_df['perc_of_whites'] = hisp_pop_df['White'] / hisp_pop_df['White'].sum()
+    hisp_pop_df['perc_of_his'] = hisp_pop_df['Hispanic'] / hisp_pop_df['Hispanic'].sum()
     hisp_pop_df = hisp_pop_df.join(county_beds.set_index('county'), on='CTYNAME')
+    hisp_pop_df = hisp_pop_df.join(senior_pop.set_index('CTYNAME'), on='CTYNAME')
+    hisp_pop_df['perc_of_beds'] = hisp_pop_df['icu_beds'] / hisp_pop_df['icu_beds'].sum()
+    hisp_pop_df.sort_values(by=['perc_of_beds'], inplace=True, ascending=False)
     # print(hisp_pop_df.head(30), hisp_pop_df.tail(35))
-    top_3 = hisp_pop_df.iloc[:4]
-    top_3.drop(['CTYNAME'], axis=1, inplace=True)
-    bottom = hisp_pop_df.iloc[4:]
-    # print(top_3.sum())
-    # print(bottom.sum())
-    fig, ax = plt.subplots(1, 1)
-    
+    has_beds = hisp_pop_df['icu_beds'] > 0
+    no_beds = hisp_pop_df['icu_beds'] == 0 
+    na_beds = hisp_pop_df['icu_beds'].isna()
+    county_has_beds = hisp_pop_df[has_beds]
+    county_no_beds = hisp_pop_df[no_beds | na_beds]
 
+    print(county_has_beds.sum())
+    # print('--------------------------')
+    print(county_no_beds.sum())
+
+
+    total = hisp_pop_df['TOT_POP'].sum()
+    cases_per_100k_no_beds = (county_no_beds['COVID Cases'].sum()/(county_no_beds['TOT_POP'].sum()/100000))
+    cases_per_100k_CO = (hisp_pop_df['COVID Cases'].sum()/(hisp_pop_df['TOT_POP'].sum()/100000))
+    cases_per_100k_w_beds = (county_has_beds['COVID Cases'].sum()/(county_has_beds['TOT_POP'].sum()/100000))
+
+    counties = ('Counties \nwith ICU beds','Colorado Average', 'Counties \nwithout ICU beds')
+    cases_per_100k = [cases_per_100k_w_beds, cases_per_100k_CO, cases_per_100k_no_beds]
+
+    perc_white = get_percents('White')
+    perc_hisp = get_percents('Hispanic')
+    perc_senior = get_percents('Senior')
+
+    # bar_plot_and_save('Percent Senior Population', counties, perc_senior, 'tab:cyan')
+    bar_plot_and_save('Percent Hispanic Population', counties, perc_hisp, 'tab:purple')
+    bar_plot_and_save('Percent White Population', counties, perc_white, 'tab:red')
+    bar_plot_and_save('Cases of COVID-19 \nper 100,000', counties, cases_per_100k, 'tab:green')
