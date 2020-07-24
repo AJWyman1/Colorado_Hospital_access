@@ -36,7 +36,7 @@ Starting with race we can see how these counties compare to the averages across 
 ![](img/perc_hispanic_pop_beds.png)
 
 
-We can see from the charts that for counties without ICU beds there is no overrepresentation of minorities. As for the counties with ICU beds they are right around the state average.
+We can see from the charts that for counties without ICU beds there is an underrepresentation of minorities. As for the counties with ICU beds they are right around the state average.
 
 Looking at the population of senior citizens(65+)
 
