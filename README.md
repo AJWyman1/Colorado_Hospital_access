@@ -13,7 +13,7 @@
 
 ## Exploring the Data
 
- To  begin with I was working with three sets of data The first containing data that breaks down Colorado counties into various demographic groups by race. This dataset also includes the number of incidences of COVID along with a few columns of economical data. Most importantly, the final column, tells us the average life expectancy for each county. 
+ To  begin with I was working with three sets of data The first containing data that breaks down Colorado counties into various demographic groups by race. This dataset also includes the prevalence of COVID along with a few columns of economical data. Most importantly, the final column, tells us the average life expectancy for each county. 
 
 ![](img/dataframe_info.png)
 
@@ -50,11 +50,11 @@ In counties without ICU beds senior citizens are over the state average.
 
 ---
 
-Looking into the data on COVID-19 incidences.
+Looking into the data on COVID-19 prevalence.
 
 ![](img/covid_per_100k.png)    
 
-Because of the population difference I have normalized the incidences of COVID-19 per 100,000 people.
+Because of the population difference I have normalized the prevalence of COVID-19 per 100,000 people.
 
 Counties without ICU beds are well below the state average for cases of COVID-19. This could be caused by a number of factors such as lower population densities in these counties or even because of the higher senior population who (hopefully) took the stay-at-home order seriously. Or less tests done in these counties because of the lack of hospitals.
 
@@ -106,7 +106,7 @@ The white population shows a slight trend towards counties with above average li
 Surprisingly, the counties with lower average life expectancies have a higher percentage of senior citizens. However, both groups of counties are right around the average for the state.
 
 ---
-#### Incidences of COVID-19
+#### Prevalence of COVID-19
 
 ![](img/covid_per_100k_by_life_exp.png)
 
