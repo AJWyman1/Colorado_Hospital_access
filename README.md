@@ -126,7 +126,7 @@ There is a huge $20,000 difference in household incomes between these counties a
 ---
 ## Conclusion
 
-While having access to an ICU has almost no effect on life expectancy. However, when looking at counties with lower life expectancies some trends become clear.
+Having access to an ICU has almost no effect on life expectancy. However, when looking at counties with lower life expectancies some trends become clear.
 * These counties' populations tend to have higher percentages of hispanics when compared to the state average.
 * The average household income in these counties is below state average and $20,000 **less** when compared to counties with higher life expectancies.
 
