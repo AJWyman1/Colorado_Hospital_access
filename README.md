@@ -22,6 +22,8 @@ Lastly the 2018 Medicare Cost Report provided names of hospitals along with how 
 
 On our initial exploration we can see that counties that were hit hardest by the COVID-19 outbreak were also the most populous.  
 
+![](img/Covid_cases_by_population.png)
+
 
 ## Hospital Access
 
