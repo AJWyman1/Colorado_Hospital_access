@@ -1,11 +1,13 @@
-# Colorado Social Determinants of Health in the COVID Era
-
-COVID-19 has shown us that 
+# Colorado Determinants of Health in the COVID-19 Era
 
 
 * What are some patterns of counties with and without hospitals?
 
-* What are factors that lead to lower life expectancy?
+* Does hospital access play a role in life expectancy?
+
+* What are the make-ups of counties with limited access to hospitals?
+
+* What are factors that lead to lower/longer life expectancy?
 
 ---
 
@@ -21,7 +23,7 @@ Lastly the 2018 Medicare Cost Report provided names of hospitals along with how 
 On our initial exploration we can see that counties that were hit hardest by the COVID-19 outbreak were also the most populous.  
 
 
-## Exploring Hospital Access
+## Hospital Access
 
 Because COVID patients are generally treated in the ICU I will be focusing on the counties that have ICU beds and comparing them to counties without. 
 
@@ -30,6 +32,7 @@ Because COVID patients are generally treated in the ICU I will be focusing on th
 Starting with race we can see how these counties compare to the averages across the state.
 
 ![](img/perc_white_pop_beds.png)
+
 ![](img/perc_hispanic_pop_beds.png)
 
 
@@ -47,8 +50,9 @@ In counties without ICU beds senior citizens are over the state average.
 
 Looking into the data on COVID-19 incidences.
 
-![](img/covid_per_100k.png)
- Because of the population difference I have normalized the incidences of COVID-19 per 100,000 people.
+![](img/covid_per_100k.png)    
+
+Because of the population difference I have normalized the incidences of COVID-19 per 100,000 people.
 
 Counties without ICU beds are well below the state average for cases of COVID-19. This could be caused by a number of factors such as lower population densities in these counties or even because of the higher senior population who (hopefully) took the stay-at-home order seriously. Or less tests done in these counties because of the lack of hospitals.
 
@@ -57,6 +61,7 @@ Counties without ICU beds are well below the state average for cases of COVID-19
 Next, looking at the financial factors of these two groups of counties.
 
 ![](img/avg_gdp.png)
+
 ![](img/med_avg_hh_income.png)
 
 While the counties' average GDP per capita are both around the statewide average there is an almost $13,000 difference in the household income.
@@ -86,6 +91,7 @@ With above average life expectancy counties clocking in at an average of 84.8 ye
 ####  Demographic breakdowns for counties based on life expectancy.
 
 ![](img/perc_white_pop_by_life_exp.png)
+
 ![](img/perc_hispanic_pop_by_life_exp.png)
 
 The white population shows a slight trend towards counties with above average life expectancies. While with the Hispanic population there is an over 10 percentage point difference between the two!
@@ -109,6 +115,7 @@ Another huge difference. With high life expectancy counties showing far below th
 ####  Economic factors
 
 ![](img/med_avg_hh_income_by_life_exp.png)
+
 ![](img/avg_gdp_by_life_exp.png)
 
 There is a huge $20,000 difference in household incomes between these counties along with a gap in the GDP per capita as well.
@@ -117,7 +124,12 @@ There is a huge $20,000 difference in household incomes between these counties a
 ---
 ## Conclusion
 
-While having access to an ICU has almost no effect on life expectancy
+While having access to an ICU has almost no effect on life expectancy. However, when looking at counties with lower life expectancies some trends become clear.
+* These counties' populations tend to have higher percentages of hispanics when compared to the state average.
+* The average household income in these counties is below state average and $20,000 **less** when compared to counties with higher life expectancies.
+
+
+
 ----
 
 ## Further Research
