@@ -11,7 +11,7 @@
 
 ---
 
-## Exploring the Data and EDA
+## Exploring the Data
 
  To  begin with I was working with three sets of data The first containing data that breaks down Colorado counties into various demographic groups by race. This dataset also includes the number of incidences of COVID along with a few columns of economical data. Most importantly, the final column, tells us the average life expectancy for each county. 
 
